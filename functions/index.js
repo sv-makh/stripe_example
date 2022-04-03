@@ -1,5 +1,5 @@
 const functions = require("firebase-functions");
-const stripe = require("stripe")("sk_test_51KjNQvGdIA07RfpYNbSmfoVfonOIr4oXXNaIkjckOV5Yz5kNcs2w46hS63Bp6OYri8EnlMLbW52Ub3sClTgbAKnq00MNDAd53f");
+const stripe = require("stripe")("secret key");
 
 exports.stripePaymentIntentRequest = functions.https.onRequest(async (req, res) => {
     try {
