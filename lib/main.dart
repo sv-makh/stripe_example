@@ -1,9 +1,6 @@
-import 'dart:convert';
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
-import 'package:http/http.dart' as http;
+import 'package:stripe_example/payment_page.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,36 +20,6 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.purple,
       ),
       home: const PaymentPage(),
-    );
-  }
-}
-
-class PaymentPage extends StatelessWidget {
-  const PaymentPage({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Stripe Demo App"),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ElevatedButton(
-              style: ButtonStyle(
-                foregroundColor: MaterialStateProperty.all<Color>(Colors.blue),
-              ),
-              onPressed: () {},
-              child: const Text(
-                'Buy Honey for all my Money!',
-                style: TextStyle(color: Colors.white),
-              ),
-            )
-          ],
-        ),
-      ),
     );
   }
 }
